@@ -1135,11 +1135,18 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   z-index: 100;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
 }
 
 .mobile::before {
   z-index: 10;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

@@ -18,9 +18,8 @@ $screen-lg-max: 1199px;
 
 //*Commons=================//
 
-*{
+* {
     box-sizing: border-box;
-
 }
 .title {
     font-size: 26px;
@@ -106,7 +105,7 @@ $screen-lg-max: 1199px;
     &__text {
         position: relative;
 
-        grid-row: 2 / 3 ;
+        grid-row: 2 / 3;
         //*===============//
         padding-top: 100px;
 
@@ -833,8 +832,6 @@ $screen-lg-max: 1199px;
 
 //ToDoo написать burger
 
-
-
 //*=============== menu-burger===============*//
 
 .conteiner {
@@ -849,9 +846,13 @@ $screen-lg-max: 1199px;
     width: 100%;
 
     z-index: 100;
-    &::before{
+    @media (max-width: $screen-sm-max) {
+        display: block;
+    }
+    display: none;
+    &::before {
         z-index: 10;
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -866,14 +867,12 @@ $screen-lg-max: 1199px;
         align-items: center;
         justify-content: space-between;
         padding: 0 20px 0 20px;
-
     }
 
     &__logo {
-
         z-index: 10;
         position: relative;
-        
+
         width: 90px;
         height: 80px;
     }
@@ -888,11 +887,8 @@ $screen-lg-max: 1199px;
     }
 
     &__menu {
-        
     }
 }
-
-
 
 .mobile-burger {
     display: none;
@@ -911,7 +907,7 @@ $screen-lg-max: 1199px;
             z-index: 11;
         }
     }
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         width: 100%;
@@ -943,17 +939,15 @@ $screen-lg-max: 1199px;
     &.active::before {
         transform: rotate(45deg);
         top: 9px;
-}
+    }
     &.active::after {
         transform: rotate(-45deg);
         bottom: 9px;
-
-}
+    }
     &.active span {
         transform: scale(0);
     }
 }
-
 
 .menu {
     z-index: 5;
@@ -966,11 +960,11 @@ $screen-lg-max: 1199px;
 
     background-color: rgba(0, 91, 193, 1);
     padding-top: 100px;
-    
+
     transition: 0.4s ease;
     overflow: auto;
 
-    &.active{
+    &.active {
         top: 0%;
     }
 
@@ -981,7 +975,7 @@ $screen-lg-max: 1199px;
         display: block;
         font-size: 32px;
         color: #fff;
-        padding:30px ;
+        padding: 30px;
         &:hover {
             transition: 0.45s ease;
             transition-property: text-decoration, background-color;
@@ -991,4 +985,3 @@ $screen-lg-max: 1199px;
         }
     }
 }
-
